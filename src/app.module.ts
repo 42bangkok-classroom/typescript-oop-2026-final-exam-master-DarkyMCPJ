@@ -7,7 +7,7 @@ import { APP_FILTER } from '@nestjs/core';
 import { ApiExceptionFilter } from './common/api-exception.filter';
 
 @Module({
-  imports: [ProductModule, PurchaseModule],
+  imports: [],
   controllers: [AppController],
   providers: [
     AppService,
