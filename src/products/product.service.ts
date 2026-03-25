@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Product } from './product.interface';
 import { ApiResponse } from '../interfaces/response.interface';
 import * as fs from 'fs';
+
 @Injectable()
 export class ProductService {
   findAll(): ApiResponse<Product[]> {
@@ -9,5 +10,9 @@ export class ProductService {
     const productData = JSON.parse(readProductData) as Product[];
     return productData;
   }
-  }
-
+}
+/*return {
+  success: true,
+  data: productData,
+  message: 'Fetched products successfully',
+};
