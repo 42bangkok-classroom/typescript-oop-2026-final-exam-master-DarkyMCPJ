@@ -12,10 +12,10 @@ export class ProductService {
     const readProductData = readFileSync(filePath, 'utf-8');
     const productData = JSON.parse(readProductData) as Product[];
     
-  return {
-    success: true,
-    data: productData,
-    message: 'Fetched products successfully',
-  };
-}
+    return {
+      success: true,
+      data: productData,
+      message: 'Fetched products successfully',
+    };
+  }
 }
