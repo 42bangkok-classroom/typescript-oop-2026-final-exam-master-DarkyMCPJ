@@ -11,4 +11,3 @@ export class ProductService {
     return productData;
   }
 }
-
