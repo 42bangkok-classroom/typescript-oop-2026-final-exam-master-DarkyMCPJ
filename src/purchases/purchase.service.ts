@@ -5,8 +5,6 @@ import * as fs from 'fs';
 export class PurchaseService {
   findAll(
     customerName?: string,
-    startDate?: string,
-    endDate?: string,
   ): Purchase[] {
     const rawdata = fs.readFileSync('data/purchases.json', 'utf-8');
     let data = JSON.parse(rawdata) as Purchase[];
