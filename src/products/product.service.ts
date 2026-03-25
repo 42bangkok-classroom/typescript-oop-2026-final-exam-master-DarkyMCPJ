@@ -11,8 +11,3 @@ export class ProductService {
     return productData;
   }
 }
-/*return {
-  success: true,
-  data: productData,
-  message: 'Fetched products successfully',
-};
