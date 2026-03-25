@@ -6,6 +6,10 @@ export class PurchaseController {
   constructor(private readonly purchaseService: PurchaseService) {}
 
   @Get()
-  findAll() {
+  findAll(
+    @Query('customerName') customerName?: string,
+    @Query('startDate') startDate?: string,
+    @Query('endDate') endDate?: string,
+  ) {
     return this.purchaseService.findAll(customerName, startDate, endDate);
   }
