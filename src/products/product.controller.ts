@@ -9,7 +9,4 @@ export class ProductController {
   findAll() {
     return this.productService.findAll();
   }
-  All(){
-    return this.productService.All();
-  }
 }
