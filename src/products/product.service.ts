@@ -8,6 +8,11 @@ export class ProductService {
   findAll(): ApiResponse<Product[]> {
     const readProductData = fs.readFileSync('data/products.json', 'utf-8');
     const productData = JSON.parse(readProductData) as Product[];
-    return productData;
+    return {
+      success: true,
+      data: productData,
+      message: 'Fetched products successfully',
+    };
   }
 }
+
