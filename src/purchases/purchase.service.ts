@@ -36,3 +36,24 @@ export class PurchaseService {
       message: isFiltered ? 'Filtered purchases successfully' : 'Fetched purchases successfully',
     };
   }
+
+  findOne(id: number): ApiResponse<Purchase | null> {
+    const readPurchaseData = readFileSync(filePath, 'utf-8');
+    const purchaseData = JSON.parse(readPurchaseData) as Purchase[];
+    const purchase = purchaseData.find((p) => p.id === id);
+
+    if (!purchase) {
+      return {
+        success: false,
+        data: null,
+        message: `Purchase with id ${id} not found`,
+      };
+    }
+
+    return {
+      success: true,
+      data: purchase,
+      message: 'Fetched purchase successfully',
+    };
+  }
+}

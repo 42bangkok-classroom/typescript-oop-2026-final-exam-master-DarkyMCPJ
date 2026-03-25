@@ -13,3 +13,9 @@ export class PurchaseController {
   ) {
     return this.purchaseService.findAll(customerName, startDate, endDate);
   }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.purchaseService.findOne(Number(id));
+  }
+}
