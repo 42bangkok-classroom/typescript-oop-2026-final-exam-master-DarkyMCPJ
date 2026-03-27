@@ -10,4 +10,3 @@ export class AppController {
     return this.appService.getHello();
   }
 }
-//getHello(): string {
