@@ -43,6 +43,3 @@ export class ApiExceptionFilter implements ExceptionFilter {
     response.status(status).json(errorResponse);
   }
 }
-
-
-//XDDDD
